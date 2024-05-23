@@ -20,7 +20,6 @@ ChartJS.register(
 const options = {
   scales: {
     x: {
-      type: 'time',
       time: {
         displayFormats: {
           hour: 'HH:mm'
@@ -48,7 +47,7 @@ const options = {
       },
     },
   },
-} as ChartOptions<'line'>; // chart.js versiyasi boyicha ChartOptions ni o'zgartiring
+} as ChartOptions<'line'>; 
 
 
 
@@ -76,13 +75,13 @@ export default function App() {
 
     let timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 
-    console.log(timeString);
+  
     unixTime += ml["interval"];
-    console.log(unixTime);
+
     labels.push(hl == 'H' || hl == 'D' ? timeString : hl == 'W' || hl == 'M' ? month + '.' + day : month + '.' + year);
   });
 
-  console.log(labels);
+  
 
   const data = {
     labels,
